@@ -27,9 +27,7 @@ namespace CEngine
 
         public void Update()
         {
-            if (Apocalypto)
-                return;
-
+          
             taskManager.Update();
             uiManager.Update();
         }
@@ -47,13 +45,6 @@ namespace CEngine
             GameObjectLoader.Instance.Dispose();
         }
 
-        private bool Apocalypto
-        {
-            get
-            {
-                return loginTimeSpan.TotalSeconds > 1533657600 && UnityEngine.Random.Range(1, 10) >= 9;
-            }
-        }
-
+      
     }
 }
