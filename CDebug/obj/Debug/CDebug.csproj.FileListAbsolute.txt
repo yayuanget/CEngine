@@ -1,0 +1,7 @@
+G:\dll\CEngine\CDebug\bin\Debug\CDebug.dll
+G:\dll\CEngine\CDebug\bin\Debug\CDebug.pdb
+G:\dll\CEngine\CDebug\bin\Debug\UnityEngine.dll
+G:\dll\CEngine\CDebug\bin\Debug\UnityEngine.xml
+G:\dll\CEngine\CDebug\obj\Debug\CDebug.csproj.CoreCompileInputs.cache
+G:\dll\CEngine\CDebug\obj\Debug\CDebug.dll
+G:\dll\CEngine\CDebug\obj\Debug\CDebug.pdb

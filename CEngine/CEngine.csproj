@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53B1A0C3-5DC3-462B-BBEB-9AC764A274B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CEngine</RootNamespace>
+    <AssemblyName>CEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RemoteRes;LocalRes;UNITY_EDITOR;UNITY_STANDALONE_WIN;UNITY_ANDROID;UNITY_IPHONE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CEngine.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CDebug">
+      <HintPath>..\CDebug\bin\Debug\CDebug.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Launcher.cs" />
+    <Compile Include="Modules\Resource\AssetBundleLoader.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches\AssetBundleCache.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches\StringCache.cs" />
+    <Compile Include="Modules\Resource\CacheModule\IRefCounter.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Pools.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches\SoundCache.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches\SpriteCache.cs" />
+    <Compile Include="Modules\Resource\CacheModule\Caches\TextureCache.cs" />
+    <Compile Include="Modules\Resource\GameObjectLoader.cs" />
+    <Compile Include="Modules\Resource\IResourceLoader.cs" />
+    <Compile Include="Modules\Resource\TaskManager.cs" />
+    <Compile Include="Modules\Resource\SettingLoader.cs" />
+    <Compile Include="Modules\Resource\TaskEntity\FrameTask.cs" />
+    <Compile Include="Modules\Resource\TaskEntity\ITask.cs" />
+    <Compile Include="Modules\Resource\TaskEntity\ThreadTask.cs" />
+    <Compile Include="Modules\Resource\TaskEntity\WWWTask.cs" />
+    <Compile Include="Modules\Resource\TextureLoader.cs" />
+    <Compile Include="Modules\Setting\SettingParser.cs" />
+    <Compile Include="Modules\UILogic\Enums.cs" />
+    <Compile Include="Modules\UILogic\IUIBehavior.cs" />
+    <Compile Include="Modules\UILogic\Layer\UIBaseLayer.cs" />
+    <Compile Include="Modules\UILogic\Layer\UILayer.cs" />
+    <Compile Include="Modules\UILogic\Layer\UIGuideLayer.cs" />
+    <Compile Include="Modules\UILogic\Layer\UIOverLayer.cs" />
+    <Compile Include="Modules\UILogic\UILoader.cs" />
+    <Compile Include="Modules\UILogic\UIManager.cs" />
+    <Compile Include="Modules\UILogic\UIBehavior.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\UISetting.cs" />
+    <Compile Include="Template\BaseCache.cs" />
+    <Compile Include="Template\BaseModel.cs" />
+    <Compile Include="Template\SingletonBase.cs" />
+    <Compile Include="Template\ViewMediator.cs" />
+    <Compile Include="Tool\ByteConvert.cs" />
+    <Compile Include="Tool\ConfigManager.cs" />
+    <Compile Include="Tool\CTimer.cs" />
+    <Compile Include="Tool\MessageEvent\Callback.cs" />
+    <Compile Include="Tool\MessageEvent\Messenger.cs" />
+    <Compile Include="Tool\platform.cs" />
+    <Compile Include="Tool\RemoteTools.cs" />
+    <Compile Include="Tool\StringEncrytion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Sound\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
